@@ -1,13 +1,8 @@
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
-        nums.sort()
-        l = 0
-        r = 1
-        while r < len(nums):
-            if nums[l] == nums[r]:
+        hash_map = set()
+        for num in nums:
+            if num in hash_map:
                 return True
-            l+=1
-            r+=1 
-
+            hash_map.add(num)
         return False
-     
