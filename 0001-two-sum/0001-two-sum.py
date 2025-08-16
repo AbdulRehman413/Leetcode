@@ -1,6 +1,14 @@
-class Solution(object):
-    def twoSum(self, nums, target):
-        for i in range(len(nums)):
-            for j in range(i+1, len(nums)):
-                if (nums[i] + nums[j] == target):
-                    return i,j
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        nums.sort()
+        l = 0
+        r = len(nums) - 1
+        while l<r:
+            s = nums[l] + nums[r]
+            if s == target:
+                return l,r
+            elif s < target:
+                l+=1
+            else:
+                r-=1
+        
