@@ -1,8 +1,8 @@
 class Solution:
     def maximumProduct(self, nums: List[int]) -> int:
     
-        max1 = max2 = max3 = -1001
-        min1 = min2 = 1001
+        max1 = max2 = max3 = float('-inf')
+        min1 = min2 = float('inf')
         for x in nums:
             if x > max1:
                 max3 = max2
