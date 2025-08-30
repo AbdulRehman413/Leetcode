@@ -12,16 +12,9 @@ class Solution:
 
 
         # return prices 
-        n = len(prices)
-        result = []
-        
-        for i in range(n):
-            discount = 0
-            # look for the first smaller-or-equal price to the right
-            for j in range(i+1, n):
-                if prices[j] <= prices[i]:
-                    discount = prices[j]
-                    break
-            result.append(prices[i] - discount)
-        
-        return result
+        stack = []
+        for i, a in enumerate(prices):
+            while stack and prices[stack[-1]] >= a:
+                prices[stack.pop()] -= a
+            stack.append(i)
+        return prices
