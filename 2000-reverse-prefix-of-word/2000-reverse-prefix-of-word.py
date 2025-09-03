@@ -2,8 +2,7 @@ class Solution:
     def reversePrefix(self, word: str, ch: str) -> str:
         stack = []
         for i , c in enumerate(word):
-            if ch not in word:
-                return word
+            
             if c == ch:
               
                 stack.append(ch)
