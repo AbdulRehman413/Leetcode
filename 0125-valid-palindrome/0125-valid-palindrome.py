@@ -4,10 +4,11 @@ class Solution(object):
         for i in s:
             if i.isalnum():
                 temp.append(i.lower())
-        clean = ''.join(temp)
-        reverse = temp[::-1]
-        if reverse == temp:
-            return True
-        return False
+        # clean = ''.join(temp)
+        # reverse = temp[::-1]
+        # if reverse == temp:
+        #     return True
+        # return False
+        return temp
 
         
