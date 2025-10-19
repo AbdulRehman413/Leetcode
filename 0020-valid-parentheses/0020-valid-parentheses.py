@@ -1,13 +1,13 @@
 class Solution:
     def checking(self , s:str):
-
         if ")" in s:
             return "("
-        if "}" in s:
+        if "}" in  s:
             return "{"
-        return "["
+        else:
+            return "["
     def isValid(self, s: str) -> bool:
-        stack = []
+        stack =  []
         for i in s:
             if i in "({[":
                 stack.append(i)
@@ -17,4 +17,5 @@ class Solution:
                 else:
                     return False
         return not stack
+        
        
