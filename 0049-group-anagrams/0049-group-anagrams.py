@@ -8,3 +8,4 @@ class Solution(object):
             else:
                 group[key]= [i]
         return list(group.values())
+        
