@@ -8,5 +8,5 @@ class Solution(object):
             else:
                 hashh[key] = [i]
 
-        return list(hashh.values())
+        return (hashh.values())
         
