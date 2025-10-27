@@ -7,7 +7,7 @@ class Solution:
         else:
             return "["
 
-    def isVvalid(self, s:str) -> bool:
+    def isValid(self, s:str) -> bool:
         stack = []
         for i in s:
             if i in "([{":
