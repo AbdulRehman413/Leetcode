@@ -5,24 +5,36 @@
 #         self.next = next
 class Solution(object):
     def isPalindrome(self, head):
-        slow = fast = head
+        #  midldle of linked list
+        slow = head
+        fast = head 
         while fast and fast.next:
             slow = slow.next
             fast = fast.next.next
-        
-        prev = None
+
+        # Reverse LL
+
+        prev = None 
         while slow:
             nxt = slow.next
             slow.next = prev
-            prev = slow
+            prev = slow 
             slow = nxt
-        
- 
-        left, right = head, prev
-        while right: 
+
+        # Comparison
+
+        left = head
+        right = prev 
+        while right:
             if left.val != right.val:
                 return False
             left = left.next
             right = right.next
-        
+
         return True
+
+        
+
+
+
+        
